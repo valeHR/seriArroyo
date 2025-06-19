@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>SeriArroyo | Serigrafía Arroyo la mejor de Iguala.</title> 
+
+  <!-- Fuentes e Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+
+  <!-- Favicons -->
+	<link href="images/LgFavicon.png" rel="icon">
+	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #a4afb893;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+   main {
+  flex: 1;
+  padding: 100px 20px 40px;
+  color: #ce3333;
+  
+    }
+
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-link {
+      color: rgb(36, 30, 30) !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #d42b25 !important;
+    }
+
+    .gallery-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .filters {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .filters button {
+      margin: 5px 10px;
+      padding: 10px 18px;
+      border: none;
+      background-color: #9b4839e0;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: 600;
+    }
+
+    .filters button:hover,
+    .filters button.active {
+      background-color: #b32a00d7;
+    }
+
+    .photo-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      margin-bottom: 30px;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .photo-card:hover img {
+      transform: scale(1.1);
+      filter: brightness(80%);
+    }
+
+    .photo-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 18px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+    }
+
+    .photo-card:hover .photo-info {
+      transform: translateY(0);
+    }
+
+    .photo-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .photo-subtitle {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #ddd;
+    }
+
+    .photo-description {
+      font-size: 0.9rem;
+      margin-top: 5px;
+      color: #ccc;
+    }
+
+    footer {
+      background-color: #212529;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .with-hover-text {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .with-hover-text i {
+      font-size: 24px;
+      color: #eb2121e1;
+    }
+
+    .hover-text {
+      display: block;
+      margin-top: 11px;
+      font-size: 0.9rem;
+    }
+
+    .navbar-brand:hover {
+    color: #d42b25; /* Rojo al pasar el mouse */
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar shadow">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="images/LgFavicon.png" alt="Logo" /> Serigrafía Arroyo
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html"><i class="fas fa-book-open"></i> Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#slide-6"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="gallery-container">
+<h2 class="text-center mb-4">Catálogo de Proyectos</h2>
+<p class="text-center text-muted fs-5 mb-5 hover-red-effect">
+  Explora nuestra colección de trabajos realizados, donde cada proyecto es una muestra de nuestra pasión por la creatividad y la calidad en serigrafía, impresión y personalización.
+</p>      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="vasos">Vasos</button>
+        <button class="filter-btn" data-filter="playeras">Playeras</button>
+        <!-- <button class="filter-btn" data-filter="estampados">Estampados</button> -->
+        <button class="filter-btn" data-filter="gorras">Gorras</button>
+        <button class="filter-btn" data-filter="bordados">Bordados</button>
+        <button class="filter-btn" data-filter="plumas">Plumas</button>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 filter-item vasos">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Vaso Personalizado" data-description="Vasos con diseños únicos para eventos." data-img="images/portfolio/s10.jpg">
+            <img src="images/portfolio/s10.jpg" alt="Vaso serigrafiado" />
+            <div class="photo-info">
+              <div class="photo-title">Vaso Personalizado</div>
+              <div class="photo-subtitle">Vaso para boda</div>
+              <div class="photo-description">Vaso con diseño único para eventos.</div>
+            </div>
+          </div>
+        </div>
+        <!-- Agrega más elementos similares aquí  VASOS PERSONALIZADOS-->
+
+        <div class="col-md-4 filter-item vasos">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Vaso Personalizado" data-description="Vasos con diseños únicos para eventos y promociones." data-img="images/portfolio/p9.webp">
+            <img src="images/portfolio/p9.webp" alt="Vaso serigrafiado" />
+            <div class="photo-info">
+              <div class="photo-title">Vaso Personalizado</div>
+              <div class="photo-subtitle">Vaso para XV</div>
+              <div class="photo-description">Vasos para xv y eventos.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item vasos">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Vaso Personalizado" data-description="Vasos con diseños únicos para eventos y promociones." data-img="images/portfolio/s9.jpg">
+            <img src="images/portfolio/s9.jpg" alt="Vaso serigrafiado" />
+            <div class="photo-info">
+              <div class="photo-title">Vaso Personalizado</div>
+              <div class="photo-subtitle">Vasos de XV</div>
+              <div class="photo-description">Vasos con diseños únicos para eventos y promociones.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item vasos">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Vaso Personalizado" data-description="Vasos con diseños únicos para eventos y promociones." data-img="images/portfolio/p1.jpg">
+            <img src="images/portfolio/p1.jpg" alt="Vaso serigrafiado" />
+            <div class="photo-info">
+              <div class="photo-title">Vaso Personalizado</div>
+              <div class="photo-subtitle">Vaso Rodrigo</div>
+              <div class="photo-description">Vaso con personalización de Homero</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item vasos">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Vaso Personalizado" data-description="Vasos con diseños únicos para eventos y promociones." data-img="images/portfolio/p2.jpg">
+            <img src="images/portfolio/p2.jpg" alt="Vaso serigrafiado" />
+            <div class="photo-info">
+              <div class="photo-title">Vaso Personalizado</div>
+              <div class="photo-subtitle">Vaso personal </div>
+              <div class="photo-description">Vasos con diseño de los simpson.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item vasos">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Vaso Personalizado" data-description="Vasos con diseños únicos para eventos y promociones." data-img="images/portfolio/p10.jpg">
+            <img src="images/portfolio/p10.jpg" alt="Vaso serigrafiado" />
+            <div class="photo-info">
+              <div class="photo-title">Vaso Personalizado</div>
+              <div class="photo-subtitle">Vaso de boda</div>
+              <div class="photo-description">Vasos con diseños para eventos de boda.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item vasos">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Vaso Personalizado" data-description="Vasos con diseños únicos para eventos y promociones." data-img="images/portfolio/p11.jpg">
+            <img src="images/portfolio/p11.jpg" alt="Vaso serigrafiado" />
+            <div class="photo-info">
+              <div class="photo-title">Vaso Personalizado</div>
+              <div class="photo-subtitle">Vaso corporativo</div>
+              <div class="photo-description">Vasos con diseño único para corporativo.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item vasos">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Vaso Personalizado" data-description="Vasos con diseños únicos para eventos y promociones." data-img="images/portfolio/p12.png">
+            <img src="images/portfolio/p12.png" alt="Vaso serigrafiado" />
+            <div class="photo-info">
+              <div class="photo-title">Vaso Personalizado</div>
+              <div class="photo-subtitle">Vaso con diseños</div>
+              <div class="photo-description">Vasos con diseños únicos para publicidad, eventos y promociones.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item vasos">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Vaso Personalizado" data-description="Vasos con diseños únicos para eventos y promociones." data-img="images/portfolio/pq.jpg">
+            <img src="images/portfolio/pq.jpg" alt="Vaso serigrafiado" />
+            <div class="photo-info">
+              <div class="photo-title">Vaso Personalizado</div>
+              <div class="photo-subtitle">Vaso de recuerdo</div>
+              <div class="photo-description">Vasos con diseños de recuerdo amoroso.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PLAYERAS  -->
+        <div class="col-md-4 filter-item playeras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Playera Casual" data-description="Playeras cómodas con estampados personalizados." data-img="images/portfolio/s2.png">
+            <img src="images/portfolio/s2.png" alt="Playera serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Playera serigrafía</div>
+              <div class="photo-subtitle">Playera proceso</div>
+              <div class="photo-description">Playeras cómodas con estampados personalizados y diseño único.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item playeras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Playera Casual" data-description="Playeras cómodas con estampados personalizados." data-img="images/portfolio/s8.jpg">
+            <img src="images/portfolio/s8.jpg" alt="Playera serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Playera Casual</div>
+              <div class="photo-subtitle">Playera blanca</div>
+              <div class="photo-description">Playeras con diseño rostro personalizados.</div>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-md-4 filter-item playeras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Playera Casual" data-description="Playeras cómodas con estampados personalizados." data-img="images/portfolio/s22.avif">
+            <img src="images/portfolio/s22.avif" alt="Playera serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Playera Casual</div>
+              <div class="photo-subtitle">Playeras duo</div>
+              <div class="photo-description">Playeras estampados personalizados de perritos.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item playeras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Playera Casual" data-description="Playeras cómodas con estampados personalizados." data-img="images/portfolio/st13 (1).jpeg">
+            <img src="images/portfolio/st13 (1).jpeg" alt="Playera serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Playera Casual</div>
+              <div class="photo-subtitle">Playera de ballet</div>
+              <div class="photo-description">Playeras con estampados personalizados de ballet folklorico.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item playeras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Playera Casual" data-description="Playeras cómodas con estampados personalizados." data-img="images/portfolio/p8.jpg">
+            <img src="images/portfolio/p8.jpg" alt="Playera serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Playera Casual</div>
+              <div class="photo-subtitle">Playera especial</div>
+              <div class="photo-description">Playera diseño personalizado día de muertos.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item playeras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Playera Casual" data-description="Playeras cómodas con estampados personalizados." data-img="images/portfolio/p7.jpg">
+            <img src="images/portfolio/p7.jpg" alt="Playera serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Playera Casual</div>
+              <div class="photo-subtitle">Playera #8M</div>
+              <div class="photo-description">Playeras diseño personalizado 8M.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item playeras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Playera Casual" data-description="Playeras cómodas con estampados personalizados." data-img="images/portfolio/p3.jpg">
+            <img src="images/portfolio/p3.jpg" alt="Playera serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Playera Casual</div>
+              <div class="photo-subtitle">Día de muertos</div>
+              <div class="photo-description">Playera estampados personalizado día de muertos.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item playeras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Playera Casual" data-description="Playeras cómodas con estampados personalizados." data-img="images/portfolio/p5.webp">
+            <img src="images/portfolio/p5.webp" alt="Playera serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Playera Casual</div>
+              <div class="photo-subtitle">Playeras uwu</div>
+              <div class="photo-description">Playera con diseño de recuerdo.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item playeras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Playera Casual" data-description="Playeras cómodas con estampados personalizados." data-img="images/portfolio/p4.jpg">
+            <img src="images/portfolio/p4.jpg" alt="Playera serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Playera Casual</div>
+              <div class="photo-subtitle">Playera estampado</div>
+              <div class="photo-description">Playeras estampados personalizado de Super Tadeo.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item playeras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Playera Casual" data-description="Playeras cómodas con estampados personalizados." data-img="images/portfolio/p3c.jpg">
+            <img src="images/portfolio/p3c.jpg" alt= "Playera serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Playera Casual</div>
+              <div class="photo-subtitle">Playera duo</div>
+              <div class="photo-description">Playeras con diseño del día del amor.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item playeras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Playera Casual" data-description="Playeras cómodas con estampados personalizados." data-img="images/portfolio/p6.jpg">
+            <img src="images/portfolio/p6.jpg" alt= "Playera serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Playera Casual</div>
+              <div class="photo-subtitle">Playera barber</div>
+              <div class="photo-description">Playeras personalizados barber.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item playeras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Playera Casual" data-description="Playeras cómodas con estampados personalizados." data-img="images/portfolio/p3e.webp">
+            <img src="images/portfolio/p3e.webp" alt= "Playera serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Playera Casual</div>
+              <div class="photo-subtitle">Playeras duo</div>
+              <div class="photo-description">Playeras dou mujer hombre con estampados personalizados.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item playeras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Playera Casual" data-description="Playeras cómodas con estampados personalizados." data-img="images/portfolio/p3s.jpg">
+            <img src="images/portfolio/p3s.jpg" alt= "Playera serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Playera Casual</div>
+              <div class="photo-subtitle">Playera duo</div>
+              <div class="photo-description">Playeras con diseño personalizados Toy con.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item playeras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Playera Casual" data-description="Playeras cómodas con estampados personalizados." data-img="images/portfolio/t1.webp">
+            <img src="images/portfolio/t1.webp" alt= "Playera serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Playera Casual</div>
+              <div class="photo-subtitle">Playeras personalizados</div>
+              <div class="photo-description">Playeras con diseño y estampado de negocios .</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item playeras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Playera Casual" data-description="Playeras cómodas con estampados personalizados." data-img="images/portfolio/t2.jpg">
+            <img src="images/portfolio/t2.jpg" alt= "Playera serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Playera Casual</div>
+              <div class="photo-subtitle">Playera uniforme</div>
+              <div class="photo-description">Playeras con diseño único para negocio o puestos.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GORRAS -->
+        <div class="col-md-4 filter-item gorras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Gorras Casual" data-description="Gorra cómodas con estampados personalizados." data-img="images/portfolio/s15.jpg">
+            <img src="images/portfolio/s15.jpg" alt= "Gorras serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Gorra Casual</div>
+              <div class="photo-subtitle">Gorra personal</div>
+              <div class="photo-description">Gorras con estampados personalizados de Paintball.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item gorras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Gorras Casual" data-description="Gorra cómodas con estampados personalizados." data-img="images/portfolio/s19.jpg">
+            <img src="images/portfolio/s19.jpg" alt= "Gorras serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Gorra Casual</div>
+              <div class="photo-subtitle">Gorra mayoreo</div>
+              <div class="photo-description">Gorras cómodas con estampados personalizados.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item gorras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Gorras Casual" data-description="Gorra cómodas con estampados personalizados." data-img="images/portfolio/g1.png">
+            <img src="images/portfolio/g1.png" alt= "Gorras serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Gorra Casual</div>
+              <div class="photo-subtitle">Gorra México</div>
+              <div class="photo-description">Gorras con estampado méxico.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item gorras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Gorras Casual" data-description="Gorra cómodas con estampados personalizados." data-img="images/portfolio/g2.jpg">
+            <img src="images/portfolio/g2.jpg" alt= "Gorras serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Gorra Casual</div>
+              <div class="photo-subtitle">Gorra México</div>
+              <div class="photo-description">Gorras con diseño de méxico y sombrero.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item gorras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Gorras Casual" data-description="Gorra cómodas con estampados personalizados." data-img="images/portfolio/g3.jpg">
+            <img src="images/portfolio/g3.jpg" alt= "Gorras serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Gorra Casual</div>
+              <div class="photo-subtitle">Gorra roja</div>
+              <div class="photo-description">Gorras roja cómodas con estampados personalizados.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item gorras">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Gorras Casual" data-description="Gorra cómodas con estampados personalizados." data-img="images/portfolio/g4.webp">
+            <img src="images/portfolio/g4.webp" alt= "Gorras serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Gorra Casual</div>
+              <div class="photo-subtitle">Gorra negra</div>
+              <div class="photo-description">Gorras  negra cómodas con estampados personalizados.</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- BORDADOS -->
+        <div class="col-md-4 filter-item bordados">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Bordados Casual" data-description="Bordados cómodas con estampados personalizados." data-img="images/portfolio/s12.jpg">
+            <img src="images/portfolio/s12.jpg" alt= "Bordados 9999serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Bordados</div>
+              <div class="photo-subtitle">Bordado guitarra</div>
+              <div class="photo-description">Diseño de bordado de guitarra personalizados.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item bordados">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Bordados Casual" data-description="Bordados cómodas con estampados personalizados." data-img="images/portfolio/b6.jpg">
+            <img src="images/portfolio/b6.jpg" alt= "Bordados 9999serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Bordado</div>
+              <div class="photo-subtitle">Playera</div>
+              <div class="photo-description">Playera para mujer con estampados personalizados.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item bordados">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Bordados Casual" data-description="Bordados cómodas con estampados personalizados." data-img="images/portfolio/b5.jpg">
+            <img src="images/portfolio/b5.jpg" alt= "Bordados 9999serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Bordado</div>
+              <div class="photo-subtitle">Servilleta</div>
+              <div class="photo-description">Diseño de bordado de bautizo Daniel.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item bordados">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Bordados Casual" data-description="Bordados cómodas con estampados personalizados." data-img="images/portfolio/b4.jpg">
+            <img src="images/portfolio/b4.jpg" alt= "Bordados 9999serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Bordado</div>
+              <div class="photo-subtitle">Servilletas</div>
+              <div class="photo-description">Bordado de recuerdo de boda con estampados personalizados.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item bordados">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Bordados Casual" data-description="Bordados cómodas con estampados personalizados." data-img="images/portfolio/b3.jpg">
+            <img src="images/portfolio/b3.jpg" alt= "Bordados 9999serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Bordado</div>
+              <div class="photo-subtitle">Casual</div>
+              <div class="photo-description">Diseño de servilletas personalizados para eventos.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item bordados">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Bordados Casual" data-description="Bordados cómodas con estampados personalizados." data-img="images/portfolio/b2.jpg">
+            <img src="images/portfolio/b2.jpg" alt= "Bordados 9999serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Bordados</div>
+              <div class="photo-subtitle">Playera cuello</div>
+              <div class="photo-description">Bordado personalizado cuello playera para mujer.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item bordados">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Bordados Casual" data-description="Bordados cómodas con estampados personalizados." data-img="images/portfolio/b1.jpg">
+            <img src="images/portfolio/b1.jpg" alt= "Bordados 9999serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Bordado</div>
+              <div class="photo-subtitle">Playera decorado</div>
+              <div class="photo-description">Bordado personalizado cuello playera para mujer.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 filter-item bordados">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="Bordados Casual" data-description="Bordados cómodas con estampados personalizados." data-img="images/portfolio/st6.jpeg">
+            <img src="images/portfolio/st6.jpeg" alt= "Bordados 9999serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Bordado</div>
+              <div class="photo-subtitle">Día de la mujer</div>
+              <div class="photo-description">Diseño de Conmemoración día internacional de la mujer.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Plumas personalizadas  -->
+        <div class="col-md-4 filter-item plumas">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="plumas Casual" data-description="plumas cómodas con estampados personalizados." data-img="images/portfolio/s21.jpg">
+            <img src="images/portfolio/s21.jpg" alt= "Bordados 9999serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Plumas</div>
+              <div class="photo-subtitle">Personalizado</div>
+              <div class="photo-description">Diseño personalizado de plumas para corporativo.</div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="col-md-4 filter-item plumas">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="plumas Casual" data-description="plumas cómodas con estampados personalizados." data-img="images/portfolio/1a.jpg">
+            <img src="images/portfolio/1a.jpg" alt= "Bordados 9999serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Plumas</div>
+              <div class="photo-subtitle">Personalizado</div>
+              <div class="photo-description">Diseño personalizado de duo de plumas.</div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="col-md-4 filter-item plumas">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="plumas Casual" data-description="plumas cómodas con estampados personalizados." data-img="images/portfolio/1b.png">
+            <img src="images/portfolio/1b.png" alt= "Bordados 9999serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Plumas</div>
+              <div class="photo-subtitle">Personalizado</div>
+              <div class="photo-description">Diseño personalizado de plumas corporativos para tu empresa.</div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="col-md-4 filter-item plumas">
+          <div class="photo-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-title="plumas Casual" data-description="plumas cómodas con estampados personalizados." data-img="images/portfolio/1c.jpg">
+            <img src="images/portfolio/1c.jpg" alt= "Bordados 9999serigrafiada" />
+            <div class="photo-info">
+              <div class="photo-title">Plumas</div>
+              <div class="photo-subtitle">Recuerdo</div>
+              <div class="photo-description">Diseño personalizado de plumas para XV.</div>
+            </div>
+          </div>
+        </div> 
+        <!-- Agrega más elementos... -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <img src="" alt="" class="w-100" id="modalImage" />
+          <div class="p-3">
+            <h5 id="modalTitle" class="mb-1"></h5>
+            <p id="modalDescription" class="mb-0 text-muted"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contacto / Footer -->
+ 	<div class="slide story" id="slide-6" data-slide="6">
+  
+  <footer>
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-12 text-center my-5">
+  <h1 class="display-7 fw-semibold">Contáctanos <span class="fw-light">fácilmente</span></h1>
+</div>
+<hr class="my-4 custom-hr">
+
+
+        <div class="col-sm-2 with-hover-text">
+          <i class="fas fa-phone"></i>
+          <span class="hover-text">+52 7331318637</span>
+        </div>
+        <div class="col-sm-2 with-hover-text">
+          <i class="fab fa-whatsapp"></i>
+          <span class="hover-text">+52 7331089280</span>
+        </div>
+        <div class="col-sm-2 with-hover-text">
+          <i class="fas fa-envelope"></i>
+          <span class="hover-text">victorarroyo632<br>@gmail.com</span>
+        </div>
+        <div class="col-sm-2 with-hover-text">
+          <i class="fas fa-map-marker-alt"></i>
+          <span class="hover-text">Calle Joaquín Baranda <br> #16</span>
+        </div>
+        <div class="col-sm-2 with-hover-text">
+          <i class="fab fa-facebook"></i>
+          <span class="hover-text">@Serigrafía Arroyo</span>
+        </div>
+        <div class="col-sm-2 with-hover-text">
+          <i class="fab fa-instagram"></i>
+          <span class="hover-text">@Serigrafía Arroyo</span>
+        </div>
+      </div>
+      <div class="mt-4">
+        &copy; <span id="currentYear"></span> 2025 Serigrafía Arroyo. | Todos los derechos reservados. | Creado por estadíavhr
+      </div>
+    </div>
+  </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const filterItems = document.querySelectorAll('.filter-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        const filter = button.dataset.filter;
+        filterItems.forEach(item => {
+          item.style.display = (filter === 'all' || item.classList.contains(filter)) ? 'block' : 'none';
+        });
+      });
+    });
+
+
+
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+
+    document.querySelectorAll('.photo-card').forEach(card => {
+      card.addEventListener('click', () => {
+        modalImage.src = card.dataset.img;
+        modalTitle.textContent = card.dataset.title;
+        modalDescription.textContent = card.dataset.description;
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

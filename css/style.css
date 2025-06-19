@@ -1,0 +1,754 @@
+
+ 
+.font-thin {
+	font-family: "Titillium Web", sans-serif;
+	font-weight: 300;
+}
+
+.font-semibold {
+	font-family: "Titillium Web", sans-serif;
+	font-weight: 800;
+}
+
+.font-light {
+	font-family: "Titillium Web", sans-serif;
+	font-weight: 200;
+}
+
+* {
+	position: relative;
+}
+
+.breaker {
+	clear: both;
+	font-size: 1px;
+	line-height: 1px;
+	height: 1px;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: #2f2f2f;
+	font-family: "Titillium Web", sans-serif;
+	font-weight: normal;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased !important;
+}
+
+.justify-text {
+	text-align: justify;
+}
+
+
+
+    .navbar-brand:hover {
+    color: #e6130c; /* Rojo al pasar el mouse */
+    }
+
+.nav a {
+  color: #110909; /* Cambia a cualquier color, por ejemplo: #ff5722, red, blue, etc. */
+  text-decoration: none; /*  quita subrayado */
+  font-weight: bold; /* texto más grueso */
+}
+
+.nav a:hover {
+  color: #d8331de0; /* Color al pasar el mouse */
+}
+
+
+.navbar {
+	background-color: #e6e5e4a6;
+	background-color: rgba(223, 228, 218, 0.856);
+	border-bottom: 0 none;
+	font-size: 12px;
+	transition: .25s all linear;
+}
+
+.navbar-responsive-collapse {
+	margin: 0 auto;
+	width: 70%;
+}
+
+.nav li {
+	text-align: center;
+	white-space: nowrap;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+	background-color: inherit;
+	outline: none;	
+}
+
+.navbar-brand {
+	padding: 6px;
+}
+
+
+/*====================================================PARA RESPOSIVEE==========================================================0*/
+@media (min-width: 768px) and (max-width: 991px) {
+	#slide-4 .content-row h2 {
+		min-height: 6em;
+	}
+}
+
+@media (max-width: 767px) {
+	
+	.nav li {
+		text-align: left;
+		white-space: nowrap;
+	}
+	
+	.navbar-responsive-collapse  {
+		width: 100%;
+	}
+	
+	.active-menu {
+		display: none !important;
+	}
+		
+	.navbar {
+		background-color: #e4e6e5 !important;
+		padding: 0;
+	}
+	
+	.navbar .nav a {
+		color: #dbe4df;
+		font-size: 12px;
+		padding-left: 0;
+	}
+	
+	.icon {
+		margin-right: 11px;
+		margin: 0;
+	}
+	
+	.nav li 
+	{
+		background-color: #47443b;
+	}
+
+	.navbar-brand {
+		margin: 0;
+	}
+
+	.nav a:hover {
+  		color: #e92011e0; /* Color al pasar el mouse */
+	}
+}
+
+	/* .navbar-brand img {
+      height: 40px;
+	  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    } */
+
+	  /*=================================================todo de navbar==============================================*/
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
+.slide {
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding-bottom: 65px;
+	padding-top: 50px;
+	text-align: center;
+}
+
+#slide-1 {
+	background-image: url('../images/seri.jpeg');
+	color: #ffffff;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+	background-attachment: relative;
+	background-position: center center;
+}
+
+#slide-1 h1 {
+	padding-top: 130px;
+}
+
+@media (max-width: 991px) {
+	#slide-1 {
+		background-position: -70% 0, 170% 0;
+	}
+}
+
+@media (max-width: 767px) {
+	#slide-1 {
+		background-image: none;
+	}
+}
+
+	#home-row-1,
+	#home-row-2 {
+		padding-top: 25px;
+	}
+	
+	#home-row-1 h1 {
+		font-size: 54px;
+	}
+	
+	#home-row-1 h4 {
+		font-size: 32px;
+	}
+	
+	#home-row-2 {
+		font-size: 25px;
+	}
+	
+	#home-row-2 .col-12 {
+		height: 232px;
+		padding-top: 30px;
+	}
+	
+	#home-row-2 .col-12 .home-hover {
+		height: 166px;
+		overflow: hidden;
+		padding-top: 26px;
+		transition: all ease-in .5s;
+	}
+	
+	#home-row-2 .col-12 .home-hover:hover {
+		height: 166px;
+		padding-top: 0;
+	}
+
+@media (max-width: 767px) {
+	#home-row-1,
+	#home-row-2 {
+		padding-top: 16px;
+	}
+	
+	#home-row-1 h1 {
+		font-size: 35px;
+	}
+	
+	#home-row-1 h4 {
+		font-size: 21px;
+	}
+	
+	#home-row-2 {
+		font-size: 16px;
+	}
+}
+
+#slide-2 {
+	background-color: #223246;
+	color: #e4e6e5;
+	padding-top: 90px;
+}
+
+	.title-row {
+		font-size: 45px;
+		padding-bottom: 50px;
+	}
+	
+	.line-row .hr {
+		background-color: #e4e6e5;
+		height: 5px;
+		margin: 0 auto;
+		width: 33%;
+	}
+	
+	.subtitle-row {
+		font-size: 35px;
+		padding-bottom: 40px;
+		padding-top: 40px;
+	}
+	
+	.content-row {
+		padding-top: 45px;
+	}
+	
+	.content-row i,
+	#about-row-5 i {
+		display: block;
+		margin: 0 auto;
+		max-height: 100%;
+		max-width: 100%;
+	}
+	
+	.content-row h2 {
+		font-size: 28px;
+		padding-bottom: 40px;
+	}
+	
+	.content-row h4 {
+		font-family: "Titillium Web", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		font-size: 20px;
+		font-weight: 300;
+	}
+	
+	i {
+		font-size: 80px;
+		color: white;
+	}
+	
+
+@media (max-width: 767px) {
+	.title-row {
+		font-size: 34px;
+		padding-bottom: 33px;
+	}
+	
+	.subtitle-row {
+		font-size: 26px;
+		padding-bottom: 26px;
+		padding-top: 26px;
+	}
+	
+	.content-row {
+		padding-top: 29px;
+	}
+	
+	.content-row h2 {
+		font-size: 24px;
+		padding-bottom: 26px;
+	}
+	
+	.content-row h4 {
+		font-size: 20px;
+	}
+}
+
+#slide-3 {
+	background-color: #4b6781;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+	text-align: left;
+	width: 100%;
+}
+	
+	#slide-3 .col-12 {
+		display: inline-block;
+		height: 451px;
+		margin: 0;
+		padding: 0;
+		width: 452px;
+	}
+
+	#slide-3 a,
+	#slide-3 img {
+		display: inline-block;
+		height: 100%;
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+@media (max-width: 991px) {
+	#slide-3 {
+		text-align: center;
+		width: 100%;
+	}
+	
+	#slide-3 .row {
+		left: 0 !important;
+		margin: 0;
+		width: 100% !important;
+	}
+	
+	#slide-3 .col-12 {
+		height: auto;
+		width: 50%
+	}
+
+	#slide-3 a,
+	#slide-3 img {
+		height: auto;
+		max-height: 100%;
+		max-width: 100%;
+		width: auto;
+	}
+}
+	
+@media (max-width: 767px) {
+	#slide-3 .col-12 {
+		width: 100%;
+	}
+}
+
+#slide-4 {
+	background-color: #284d70;
+	color: #e4e6e5;
+	padding-top: 90px;
+}
+
+#slide-4 i {
+		font-size: 80px;
+		color: white;
+	}
+
+
+#slide-5 {
+	background-color: #5b7197;
+	color: #e4e6e5;
+	padding-top: 90px;
+	
+		/*==============================CSS PARA TARJETAS DE MISION Y VISION SOLO AFECTA ESO========================*/	
+		.vision-mision-container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		justify-content: center;
+		margin-top: 40px;
+		}
+
+		.vision-mision-card {
+		background:  rgb(74, 101, 146);
+		border-radius: 12px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		padding: 30px 25px;
+		flex: 1 1 300px;
+		max-width: 500px;
+		transition: transform 0.3s ease;
+		}
+
+		.vision-mision-card:hover {
+		transform: translateY(-5px);
+		}
+
+		.vision-mision-card h1 {
+		color: #a8b1c0;
+		}
+
+		.vision-mision-card h4 {
+		color: #bdbfc5;
+		}
+}
+
+/*======================== Estilos Footer ========================*/
+
+#slide-6 {
+	background-color: #212529;
+	color: #e4e6e5;
+	padding: 60px 0 29px 0;
+	text-align: center;
+}
+
+#slide-6 .line-row .hr {
+	background-color: #d8d0d0;
+	color: #4e4e4e;
+	height: 4px;
+	width: 40%;
+	margin: 20px auto;
+}
+
+#slide-6 a {
+	color: inherit;
+	text-decoration: none;
+	outline: none;
+}
+.with-hover-text i {
+  font-size: 50px; 
+  
+}
+.with-hover-text i {
+      font-size: 27px;
+      color: #eb2121e1;
+    }
+
+	.with-hover-text {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+@media (max-width: 767px) {
+	.with-hover-text {
+		margin-top: 1em;
+		margin-bottom: 2em;
+	}
+}
+
+
+
+
+
+
+.with-hover-text span {
+	display: none;
+}
+
+.zoom {
+	background-image: url('../images/zoom.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+}
+
+#arrows {
+	bottom: 10%;
+	height: 80px;
+	position: fixed;
+	right: 10%;
+	width: 80px;
+	z-index: 1000;
+}
+
+#arrows div {
+	background-image: url('../images/website-arrows.png');
+	cursor: pointer;
+	height: 30px;
+	position: absolute;
+	width: 30px;
+}
+
+#arrows div.disabled {
+	cursor: default;
+}
+
+#arrow-up {
+	background-position: 30px 0;
+	left: 25px;
+	top: 0;
+}
+
+#arrow-up.disabled {
+	background-position: 0 0;
+}
+
+#arrow-down {
+	background-position: 30px -30px;
+	left: 25px;
+	bottom: 0;
+}
+
+#arrow-down.disabled {
+	background-position: 0 -30px;
+}
+
+#arrow-left {
+	background-position: 30px -60px;
+	left: 0;
+	top: 25px;
+}
+
+#arrow-left.disabled {
+	background-position: 0 -60px;
+}
+
+#arrow-right {
+	background-position: 30px -90px;
+	right: 0;
+	top: 25px;
+}
+
+#arrow-right.disabled {
+	background-position: 0 -90px;
+}
+
+.navigation-slide {
+	cursor: pointer;
+}
+
+
+/*footer {
+      background: #6e809b;
+      color: #f0ebeb;
+      text-align: center;
+      padding: 30px 0;
+    } */
+
+
+
+	/*===================SE AGREGOO ESTOS CODIGOS  para preguntas frecuentes -===========================-CSS PARA MI*/
+	
+.faq.section {
+  padding: 60px 0;
+  background-color: #e0e8fc;
+  color: #383737;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.faq .container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.faq .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq .faq-sidebar {
+  background-color: #c2c3d1;
+  border-radius: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.faq .faq-sidebar img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.faq .contact-box {
+  padding: 30px;
+  text-align: center;
+}
+
+.faq .contact-box h3 {
+  font-size: 1.8em;
+  color: #2b5585;
+  margin-bottom: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq .contact-box h3 i {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.faq .contact-box p {
+  font-size: 1em;
+  color: #2c2626;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.faq .btn-contact {
+  background-color: #27578b;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.faq .btn-contact:hover {
+  background-color: #2770be;
+  transform: translateY(-2px);
+}
+
+.faq .faq-item {
+  background-color: #c2c3d1;
+  border: 1px solid #e0e0e0;
+  border-radius: 30px;
+  margin-bottom: 12px;
+  padding: 19px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.faq .faq-item:hover {
+  border-color: #6e849b;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.faq .faq-item h3 {
+  font-size: 1.25em;
+  color: #333;
+  margin: 0;
+  padding-right: 30px;
+  transition: color 0.3s ease;
+}
+
+.faq .faq-item.active h3 {
+  color: #346599;
+}
+
+.faq .faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.faq .faq-item.active .faq-content {
+  max-height: 200px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.faq .faq-content h5 {
+  font-size: 0.95em;
+  line-height: 1.7;
+  color: #181414;
+  margin: 0;
+}
+
+@media (max-width: 991.98px) {
+  .faq .row.align-items-start.gy-4 {
+    flex-direction: column;
+  }
+
+  .faq .col-lg-5,
+  .faq .col-lg-7 {
+    width: 100%;
+  }
+
+  .faq .faq-sidebar {
+    margin-bottom: 40px;
+  }
+
+  .faq .section-title h2 {
+    font-size: 2.2em;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .faq.section {
+    padding: 40px 0;
+  }
+
+  .faq .section-title h2 {
+    font-size: 1.8em;
+  }
+
+  .faq .faq-tabs .nav-link {
+    padding: 8px 18px;
+    font-size: 0.9em;
+  }
+}
+	
+
+/*---------------------PARA LAS CARD DE SERVICIOS COMO ES ESTAMPADO, DISEÑO GRAFISOC ABAJO DE SERIGRAFIA ARROTO--*/
+
+/* Estilo para el párrafo que contiene la lista */
+.lista-productos {
+    text-align: center; /* Opcional: si quieres centrar el texto */
+    line-height: 1.8; /* Espacio entre líneas, si hay salto de línea */
+}
+
+/* Estilos para las palabras específicas dentro del párrafo */
+.resaltado-producto {
+    font-family: "Georgia", serif ; /* Ejemplo de fuente: Georgia. Puedes cambiarla por otra que prefieras. */
+    font-size: 1.2em; /* Tamaño de la fuente: 1.2 veces el tamaño del texto base del párrafo */
+    font-weight: bold; /* Opcional: poner el texto en negritas */
+    color: #f1ebeb; /* Opcional: un color diferente para el texto */
+    display: inline-block; /* Para que el espacio no colapse en algunos navegadores */
+    margin-right: 5px; /* Pequeño margen entre cada palabra si el &nbsp; no es suficiente */
+}
+
+/* Si quieres que solo la primera palabra de cada grupo tenga la clase */
+ .resaltado-producto:first-of-type {
+    margin-left: 0;
+} 
+
